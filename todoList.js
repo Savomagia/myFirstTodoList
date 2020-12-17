@@ -11,9 +11,13 @@ while  (input !== "quit") {
             console.log(`${i}: ${todoList[i]}`)
         }
     } else if (input === "delete") {
-        const del = prompt("What have you accomplished?");
-        const accomplished todoList.splice(del,1);
-        console.log(`You deleted: ${accomplished[0]}`);
+        const del = parseInt(prompt("What have you accomplished?"));
+        if (!Number.isNaN(del)) {
+            const accomplished todoList.splice(del,1);
+            console.log(`You deleted: ${accomplished[0]}`);
+        } else {
+            console.log("Please enter a valid number")
+        }
     }
     input = prompt("What would you like to do?");
 }
