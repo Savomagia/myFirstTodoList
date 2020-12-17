@@ -12,7 +12,8 @@ while  (input !== "quit") {
         }
     } else if (input === "delete") {
         const del = prompt("What have you accomplished?");
-        todoList.splice(del,1); 
+        const accomplished todoList.splice(del,1);
+        console.log(`You deleted: ${accomplished[0]}`);
     }
     input = prompt("What would you like to do?");
 }
