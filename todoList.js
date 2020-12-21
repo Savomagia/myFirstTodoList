@@ -13,7 +13,7 @@ while  (input !== "quit") {
     } else if (input === "delete") {
         const del = parseInt(prompt("What have you accomplished?"));
         if (!Number.isNaN(del)) {
-            const accomplished todoList.splice(del,1);
+            const accomplished  = todoList.splice(del,1);
             console.log(`You deleted: ${accomplished[0]}`);
         } else {
             console.log("Please enter a valid number")
